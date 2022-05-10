@@ -1,0 +1,59 @@
+<h3 class="message">{{message}}</h3>
+<div class="sign">
+  <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Зарегистрироваться
+</button>
+
+<!-- Modal sign up -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <form name="signUp" action="/registration" method="post" class="modal-body signup">
+        <input class="input-field" type="text" name="name" placeholder="Name">
+        <input class="input-field" type="email" placeholder="Email" name="email">
+        <input class="input-field" type="password" placeholder="Password" name="password">
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Отмена</button>
+        <button type="submit" class="btn btn-primary">Зарегистрироваться</button>
+      </div>
+      </form>
+
+    </div>
+  </div>
+</div>
+
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+  Войти
+</button>
+
+<!-- Modal sign in-->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <form name="signIn" action="/signin" method="post" class="modal-body signup">
+        <input class="input-field" type="email" placeholder="Email" name="email">
+        <input class="input-field" type="password" placeholder="Password" name="password">
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Отмена</button>
+        <button type="submit" class="btn btn-primary">Войти</button>
+      </div>
+      </form>
+
+    </div>
+  </div>
+</div>
+
+  <button type="button" class="btn btn-primary">Выйти</button>
+</div>

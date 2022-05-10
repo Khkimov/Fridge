@@ -1,0 +1,88 @@
+<div class="search-field">
+    <input type="text" class="search-input" placeholder="Enter product name">
+    <button class="search-btn"><img class="search-icon" src="/img/search-icon.png" alt="search"></button>
+    <button><a href="http://localhost:3000">Выйти</a></button>
+  </div>
+
+<div class="container wrapper">
+  <div class="block-milk">
+    <form name="milk">
+      <div class="milk-product">
+        <div class="row col-6" style="margin-bottom: 50px;">
+          <div class="col">
+            <input name="link" type="text" placeholder="Your link to image" aria-label="First name">
+          </div>
+          <div class="col">
+            <input name="title" type="text" placeholder="Product name" aria-label="Last name">
+          </div>
+          <div>
+            <button type="submit">Add Milk product</button>
+          </div>
+        </div>
+      </div>
+    </form>
+    {{#each milk}}
+    <div class="product-card">
+      <img src="{{this.link}}" alt="photo">
+      <h2>{{this.title}}</h2>
+      <div data-id="{{this.id}}">
+        <button data-type="delete">Съесть</button>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+
+  <div class="block-sweet">
+    <form name="sweets">
+      <div class="sweet-products">
+        <div class="row col-6" style="margin-bottom: 50px;">
+          <div class="col">
+            <input name="link" type="text" placeholder="Your link to image" aria-label="First name">
+          </div>
+          <div class="col">
+            <input name="title" type="text" placeholder="Product name" aria-label="Last name">
+          </div>
+          <div>
+            <button type="submit">Add sweet product</button>
+          </div>
+        </div>
+      </div>
+    </form>
+    {{#each sweets}}
+    <div class="product-card">
+      <img src="{{this.link}}" alt="photo">
+      <h2>{{this.title}}</h2>
+      <div data-id="{{this.id}}">
+        <button data-type="delete">Съесть</button>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+
+  <div class="block-vegetable">
+    <form name="vegetable">
+      <div class="vegetable-products">
+        <div class="row col-6" style="margin-bottom: 50px;">
+          <div class="col">
+            <input name="link" type="text" placeholder="Your link to image" aria-label="First name">
+          </div>
+          <div class="col">
+            <input name="title" type="text" placeholder="Product name" aria-label="Last name">
+          </div>
+          <div>
+            <button type="submit">Add vegetable product</button>
+          </div>
+        </div>
+      </div>
+    </form>
+    {{#each vegetable}}
+    <div class="product-card">
+      <img src="{{this.link}}" alt="photo">
+      <h2>{{this.title}}</h2>
+      <div data-id="{{this.id}}">
+        <button data-type="delete">Съесть</button>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+</div>
